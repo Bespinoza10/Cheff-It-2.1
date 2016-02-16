@@ -9,7 +9,7 @@
   %body
     %nav.navbar.navbar-default
       .container
-        .navbar-brand= link_to "Recipes", recipes_path
+        = link_to image_tag("/assets/ChefItLOGO.png", :alt => "Cheffit" , class: "navbar-brand"), root_path
 
         %ul.nav.navbar-nav.navbar-right
           %li= link_to "Recipe", new_recipe_path

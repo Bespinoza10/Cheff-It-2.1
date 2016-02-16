@@ -10,8 +10,28 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
+ *= require 'masonry/basic'
+ *= require 'masonry/centered'
+ *= require 'masonry/fluid'
+ *= require 'masonry/gutters'
+ *= require 'masonry/infinitescroll'
+ *= require 'masonry/right-to-left'
+ *= require 'masonry/transitions'
  *= require_tree .
  *= require_self
  */
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+.navbar{
+  border-radius: 0px;
+  min-height: 100px;
+  .logo{
+    width: 300px;
+    height:150px;
+  }.navbar-brand{
+    min-height: 90px;
+  }
+}
+
+@import "recipes";

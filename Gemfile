@@ -22,6 +22,8 @@ gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
 #image Uploading locally
 gem "paperclip", "~> 4.3"
 
+gem 'masonry-rails'
+
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 
