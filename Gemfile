@@ -26,6 +26,8 @@ gem 'masonry-rails'
 
 gem 'cocoon', '~> 1.2', '>= 1.2.7'
 
+gem 'devise', '~> 3.5', '>= 3.5.6'
+
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 
