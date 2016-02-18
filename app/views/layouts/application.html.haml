@@ -12,15 +12,15 @@
         = link_to image_tag("/assets/new_logo.png", :alt => "Cheffit" , class: "navbar-brand"), root_path
 
         %ul.nav.navbar-nav.navbar-right
+          %li= link_to "Cheff It", root_path
           %li= link_to "Recipes", recipes_path
-          %li= link_to "New Recipe", new_recipe_path
-          %li= link_to "Sign Out", destroy_user_session_path, method: :delete
+          - if user_signed_in?
+            %li= link_to "New Recipe", new_recipe_path
+            %li= link_to "Sign Out", destroy_user_session_path, method: :delete
+          - else
+            %li= link_to "Sign In", new_user_session_path
 
     .container
       - flash.each do |name, msg|
         = content_tag :div, msg, class: "alert"
       = yield
-      %p.notice
-        = notice
-      %p.alert
-        = alert
