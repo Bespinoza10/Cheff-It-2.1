@@ -14,9 +14,13 @@
         %ul.nav.navbar-nav.navbar-right
           %li= link_to "Recipes", recipes_path
           %li= link_to "New Recipe", new_recipe_path
-          %li= link_to "Sign Out", root_path
+          %li= link_to "Sign Out", destroy_user_session_path, method: :delete
 
     .container
       - flash.each do |name, msg|
         = content_tag :div, msg, class: "alert"
       = yield
+      %p.notice
+        = notice
+      %p.alert
+        = alert
