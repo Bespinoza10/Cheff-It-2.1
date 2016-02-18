@@ -24,6 +24,8 @@ gem "paperclip", "~> 4.3"
 
 gem 'masonry-rails'
 
+gem 'cocoon', '~> 1.2', '>= 1.2.7'
+
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 

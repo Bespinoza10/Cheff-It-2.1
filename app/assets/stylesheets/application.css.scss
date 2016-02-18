@@ -23,15 +23,23 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-.navbar{
-  border-radius: 0px;
-  min-height: 100px;
-  .logo{
-    width: 300px;
-    height:150px;
-  }.navbar-brand{
-    min-height: 90px;
-  }
+$orange: #FFB300;
+
+
+
+body{
+  background: #fff;
 }
 
+nav.navbar-default{
+  background: $orange ;
+  border-color: $orange;
+}
+.navbar{
+  border-radius: 0px;
+  box-shadow: 0 0px 15px #2F3238;
+  .navbar-brand{
+    min-height: 100px;
+  }
+}
 @import "recipes";

@@ -3,15 +3,19 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-.recipe_image{
-  max-width: 560px;
-  max-height: 560px;
-  overflow: hidden;
+$orange: #FFB300;
+
+
+
+.panel{
+  border: none;
+  background: $orange;
 }
 
 .box {
-  box-shadow: 0 0px 15px #2F3238;
+  box-shadow: 0 5px 15px #909090;
   border-radius: 0px;
+  padding: 0;
   text-align: center;
   img {
     max-width: 100%;
@@ -22,7 +26,44 @@
     margin: 0;
     padding: 25px 10px;
     a {
-            color: #474747;
+      color: #474747;
     }
   }
 }
+
+
+
+  .panel img {
+    width: 100%;
+    -webkit-transition: all .3s ease-out;
+    -moz-transition: all .3s ease-out;
+    -o-transition: all .3s ease-out;
+    transition: all .3s ease-out;
+    &:hover {
+      transform: scale(1.075);
+    }
+  }
+
+  //SHOW Recipe
+
+  #recipe-info{
+    background: $orange;
+  }
+
+  #recipe-show{
+    box-shadow: 0 5px 15px #909090;
+  }
+
+  .recipe_image{
+    width: 585px;
+    height: 585px;
+    overflow: hidden;
+  }
+
+  .no-col-padl{
+    padding-left: 0;
+  }
+
+  .no-col-padr{
+    padding-right: 0;
+  }
