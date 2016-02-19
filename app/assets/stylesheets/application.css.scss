@@ -42,4 +42,13 @@ nav.navbar-default{
     min-height: 100px;
   }
 }
+
+ul.nav.navbar-nav.navbar-right{
+  padding-top: 20px;
+  .btn-in{
+    background: #efefef;
+    color: #fff;
+  }
+}
+
 @import "recipes";

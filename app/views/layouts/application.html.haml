@@ -9,16 +9,23 @@
   %body
     %nav.navbar.navbar-default
       .container
-        = link_to image_tag("/assets/new_logo.png", :alt => "Cheffit" , class: "navbar-brand"), root_path
-
-        %ul.nav.navbar-nav.navbar-right
-          %li= link_to "Cheff It", root_path
-          %li= link_to "Recipes", recipes_path
-          - if user_signed_in?
-            %li= link_to "New Recipe", new_recipe_path
-            %li= link_to "Sign Out", destroy_user_session_path, method: :delete
-          - else
-            %li= link_to "Sign In", new_user_session_path
+        .navbar-header
+          %button.navbar-toggle.collapsed{"aria-expanded" => "false", "data-target" => "#bs-example-navbar-collapse-1", "data-toggle" => "collapse", :type => "button"}
+            %span.sr-only Toggle navigation
+            %span.icon-bar
+            %span.icon-bar
+            %span.icon-bar
+          = link_to image_tag("/assets/new_logo.png", :alt => "Cheffit" , class: "navbar-brand"), root_path
+        #bs-example-navbar-collapse-1.collapse.navbar-collapse
+          %ul.nav.navbar-nav.navbar-right
+            %li= link_to "Cheff It", root_path
+            %li= link_to "Recipes", recipes_path
+            - if user_signed_in?
+              %li= link_to "New Recipe", new_recipe_path
+              %li= link_to "Sign Out", destroy_user_session_path, method: :delete
+            - else
+              %li= link_to "Sign In", new_user_session_path, class: "btn btn-in" 
+              %li= link_to "Sign Up", new_user_registration_path
 
     .container
       - flash.each do |name, msg|

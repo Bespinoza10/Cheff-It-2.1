@@ -22,3 +22,11 @@
 //= require cocoon
 //= require turbolinks
 //= require_tree .
+
+
+//For Recipe Show DIVS
+
+$('#myTabs a').click(function (e) {
+  e.preventDefault()
+  $(this).tab('show')
+})

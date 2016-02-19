@@ -57,11 +57,41 @@ $orange: #FFB300;
 
   //SHOW Recipe
 
+  header {
+  background-repeat: none;
+  background-attachment: scroll;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  // text-align: center;
+  color: white;
+  
+}
+header .intro-text {
+  padding-top: 150px;
+  padding-bottom: 150px;
+}
+
+#overlay{
+  padding: 50px 60px;
+  background-color: #000;
+  opacity: .4;
+  width: 100%;
+  height: 100%;
+}
+
+.txt-center{
+  text-align: center;
+}
+
+
   #recipe-info{
     background: $orange;
   }
 
-  #recipe-show{
+  .recipe-show{
     @include box-shadow;
   }
 
@@ -77,3 +107,9 @@ $orange: #FFB300;
   .no-col-padr{
     padding-right: 0;
   }
+
+nav#recipe-menu{
+  margin-bottom: 0px;
+  background: #fff;
+  border:none;
+}
