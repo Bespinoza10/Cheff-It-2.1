@@ -14,13 +14,11 @@
 //= require jquery_ujs
 //= require jquery
 //= require bootstrap-sprockets
-//= require masonry/jquery.masonry
-//= require masonry/jquery.event-drag
-//= require masonry/jquery.imagesloaded.min
-//= require masonry/jquery.infinitescroll.min
-//= require masonry/modernizr-transitions
 //= require cocoon
 //= require turbolinks
+
+//= require main.js
+//= require wow.js
 //= require_tree .
 
 

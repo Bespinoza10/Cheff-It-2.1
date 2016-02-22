@@ -1,0 +1,27 @@
+/*=========================
+2. header
+===========================*/
+.header-area {
+  background: rgba(255, 255, 255, 0.1) none repeat scroll 0 0;
+  border-top: 3px solid #2bcdc1;
+}
+.header-area{left: 0;
+margin: 0 auto;
+max-width: 100%;
+position: fixed !important;
+right: 0;
+top: 0;
+z-index: 9999;}
+.logo {
+  height: 40px;
+  padding: 20px 0;
+}
+.logo a {
+  display: inline-block;
+  margin-top: 8px;
+}
+.logo a img{}
+
+
+.header-area.stick {
+  background:#fff;

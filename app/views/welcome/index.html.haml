@@ -1,1 +1,32 @@
-%h1 This is the welcoming page
+#carousel-example-generic.carousel.slide{"data-ride" => "carousel"}
+  / Indicators
+  %ol.carousel-indicators
+    %li.active{"data-slide-to" => "0", "data-target" => "#carousel-example-generic"}
+    %li{"data-slide-to" => "1", "data-target" => "#carousel-example-generic"}
+    %li{"data-slide-to" => "2", "data-target" => "#carousel-example-generic"}
+  / Wrapper for slides
+  .carousel-inner{:role => "listbox"}
+    .item.active
+      = link_to image_tag("carousel/enchiladas-verdes.jpg", :alt => "Cheff It Recipes")
+      .carousel-caption
+        .col-md-6.slide-1
+          %h1 Welcome to Cheffit
+          %h4 Where Cooking is Easy
+    .item
+      = link_to image_tag("carousel/pasta-2.jpg", :alt => "Cheff It Recipes")
+      .carousel-caption
+        .col-md-6.slide-2
+          %h1 Check Out Great Recipes!
+          %h4 Sign Up to create your own delicious recipes!
+
+    .item
+      = link_to image_tag("carousel/chicken-3.jpg", :alt => "Cheff It Recipes")
+      .carousel-caption
+        .col-md-6.slide-2
+          %h1 Delicous Grilled Chicken with Vegetables
+
+.row.about
+  .col-md-12
+    %h1 About Cheff It
+    .col-md-6.center-block
+      %p Cheff It a non-profit project made by Brandon Espinoza. This is website lets you create your own recipes and save them online! Also you will be able to browse through other recipes that other users have created. Users will have a profile page where other users can checkout all your recipes and vice-versa. And the great part about this is that its designed to work on your mobile devices! So you can use this web app anywhere and at anytime! Welcome and enjoy! 

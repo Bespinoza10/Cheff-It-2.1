@@ -57,7 +57,7 @@ $orange: #FFB300;
 
   //SHOW Recipe
 
-  header {
+  .header {
   background-repeat: none;
   background-attachment: scroll;
   background-position: center center;
@@ -69,7 +69,7 @@ $orange: #FFB300;
   color: white;
   
 }
-header .intro-text {
+.intro-text {
   padding-top: 150px;
   padding-bottom: 150px;
 }

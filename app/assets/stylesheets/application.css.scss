@@ -10,13 +10,7 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require 'masonry/basic'
- *= require 'masonry/centered'
- *= require 'masonry/fluid'
- *= require 'masonry/gutters'
- *= require 'masonry/infinitescroll'
- *= require 'masonry/right-to-left'
- *= require 'masonry/transitions'
+
  *= require_tree .
  *= require_self
  */
@@ -29,6 +23,7 @@ $orange: #FFB300;
 
 body{
   background: #fff;
+  font-family: Papyrus, fantasy;
 }
 
 nav.navbar-default{
@@ -44,11 +39,63 @@ nav.navbar-default{
 }
 
 ul.nav.navbar-nav.navbar-right{
-  padding-top: 20px;
   .btn-in{
     background: #efefef;
     color: #fff;
   }
 }
+
+
+//carousel
+
+// .carousel{
+//   height: 100vh;
+//   overflow: hidden;
+// }
+
+.carousel-control.right, .carousel-control.left{
+  background-image: none;
+  display: none;
+}
+
+.header-area{
+  background: rgba(255, 255, 255, 0.6) none repeat scroll 0 0;
+  border-top: none;
+}
+
+.carousel-caption {
+  position: absolute;
+  left: 10%;
+  right: 15%;
+  bottom: 42%;
+  z-index: 10;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: #000;
+  text-align: left;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+.slide-2 {
+  color: #fff;
+}
+
+.slide-1 {
+  color: #000;
+  text-shadow: none;
+}
+
+.about{
+  text-align: center;
+  background: #dadbdb;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  margin-left: 0;
+  margin-right: 0;
+  h1{
+    padding-bottom: 25px;
+  }
+}
+
 
 @import "recipes";
