@@ -38,10 +38,18 @@ body{
   padding-top: 30px;
 }
 
+.white-text{
+  color: #fff;
+}
+
 .nav > li > a{
   color: #000;
 }
 
+.navbar-toggle .icon-bar{
+  background: #000;
+  border-radius: 0;
+}
 
 .hvr-sweep-to-top:before {
   background: $green;
@@ -86,6 +94,82 @@ body{
   color: #000;
   text-shadow: none;
 }
+
+// Login Form
+
+.form-bg {
+  background-image: url('/assets/forms/knive.jpg');
+  background-repeat: none;
+  background-attachment: scroll;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  // text-align: center;
+  height: 100vh;
+  padding-top: 160px;
+}
+
+.sign-form-bg{
+  background-image: url('/assets/forms/coffee.jpg');
+  background-repeat: none;
+  background-attachment: scroll;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  // text-align: center;
+  height: 100vh;
+  padding-top: 160px;
+}
+
+
+.login-inputs{
+  border-radius: 0;
+  background: none;
+  color: $green;
+  border-top:none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid #fff;
+}
+
+.login-inputs:focus{
+  box-shadow: none;
+  border-bottom: 1px solid $green;
+}
+
+.sign-inputs{
+  border-radius: 0;
+  background: none;
+  color: $darkgreen;
+  border-top:none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid #000;
+}
+
+.sign-inputs:focus{
+  box-shadow: none;
+  border-bottom: 1px solid $darkgreen;
+}
+
+.submit-btn{
+  border-radius: 0;
+  background: $green;
+  color: #fff;
+}
+
+btn-padding-l{
+  padding-left: 10px;
+}
+.btn-padding{
+  padding-right: 10px;
+  padding-top: 10px;
+}
+
 
 
 

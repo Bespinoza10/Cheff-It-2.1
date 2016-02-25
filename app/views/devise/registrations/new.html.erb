@@ -1,17 +1,37 @@
-<h2>Sign up</h2>
+<div class="sign-form-bg">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 padding-top">
+        <h2> Sign Up</h2>
+        <br>
+        <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+          <%= devise_error_messages! %>
 
-<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= f.error_notification %>
-
-  <div class="form-inputs">
-    <%= f.input :email, required: true, autofocus: true %>
-    <%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %>
-    <%= f.input :password_confirmation, required: true %>
+          <div class="field">
+            <%= f.label :email %><br />
+            <%= f.email_field :email, autofocus: true, class: " sign-inputs form-control" %>
+          </div>
+          <br>
+          <div class="field">
+            <%= f.label :password %>
+            <% if @minimum_password_length %>
+            <em>(<%= @minimum_password_length %> characters minimum)</em>
+            <% end %><br />
+            <%= f.password_field :password, autocomplete: "off", class: "sign-inputs form-control" %>
+          </div>
+          <br>
+          <div class="field">
+            <label>Password  <span style="font-style: bold; color: #fff;">CONFIRMATION</span></label>
+            <br>
+            <%= f.password_field :password_confirmation, autocomplete: "off", class: "sign-inputs form-control" %>
+          </div>
+          <br>
+          <div class="actions">
+            <%= f.submit "Sign up", class: "submit-btn btn" %>
+            <%= render "devise/shared/links" %>
+          </div>
+        <% end %>
+      </div>
+    </div>
   </div>
-
-  <div class="form-actions">
-    <%= f.button :submit, "Sign up" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+</div>
