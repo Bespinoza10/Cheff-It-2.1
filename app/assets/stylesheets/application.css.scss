@@ -16,33 +16,26 @@
  */
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import 'hover';
 
-$orange: #FFB300;
 
-
+$green: #88dba3;
+$lightgreen: #cff0da;
+$darkgreen: #3ac569;
+$grey: #dadbdb;
 
 body{
   background: #fff;
   font-family: Papyrus, fantasy;
 }
 
-nav.navbar-default{
-  background: $orange ;
-  border-color: $orange;
-}
-.navbar{
-  border-radius: 0px;
-  box-shadow: 0 0px 15px #2F3238;
-  .navbar-brand{
-    min-height: 100px;
-  }
+.nav > li > a{
+  color: #000;
 }
 
-ul.nav.navbar-nav.navbar-right{
-  .btn-in{
-    background: #efefef;
-    color: #fff;
-  }
+
+.hvr-sweep-to-top:before {
+  background: $green;
 }
 
 
@@ -85,17 +78,8 @@ ul.nav.navbar-nav.navbar-right{
   text-shadow: none;
 }
 
-.about{
-  text-align: center;
-  background: #dadbdb;
-  padding-top: 100px;
-  padding-bottom: 100px;
-  margin-left: 0;
-  margin-right: 0;
-  h1{
-    padding-bottom: 25px;
-  }
-}
 
 
+
+@import "welcome";
 @import "recipes";
