@@ -2,6 +2,11 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+$green: #88dba3;
+$lightgreen: #cff0da;
+$darkgreen: #3ac569;
+$grey: #dadbdb;
+
 .center-block {
   float: none;
   display: block;
@@ -20,7 +25,7 @@ $orange: #FFB300;
 
 .panel{
   border: none;
-  background: $orange;
+  background: $green;
 }
 
 .box {
@@ -37,7 +42,7 @@ $orange: #FFB300;
     margin: 0;
     padding: 25px 10px;
     a {
-      color: #474747;
+      color: $grey;
     }
   }
 }
@@ -67,7 +72,7 @@ $orange: #FFB300;
   -o-background-size: cover;
   // text-align: center;
   color: white;
-  
+
 }
 .intro-text {
   padding-top: 150px;
@@ -111,5 +116,5 @@ $orange: #FFB300;
 nav#recipe-menu{
   margin-bottom: 0px;
   background: #fff;
-  border:none;
+  border: none;
 }
