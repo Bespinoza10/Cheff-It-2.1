@@ -22,7 +22,9 @@
 $green: #88dba3;
 $lightgreen: #cff0da;
 $darkgreen: #3ac569;
-$grey: #dadbdb;
+$grey: #dadbdb/* #dadbdb */;
+$greengray: #BFD8D0;
+$greenbg: rgba(136, 219, 163, 0.73);
 
 body{
   background: #fff;
@@ -53,6 +55,29 @@ body{
 
 .hvr-sweep-to-top:before {
   background: $green;
+}
+.hvr-shutter-out-vertical{
+  background: $green;
+}
+.hvr-shutter-out-vertical:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(229, 74, 74, 0.73);
+  -webkit-transform: scaleY(0);
+  transform: scaleY(0);
+  -webkit-transform-origin: 50%;
+  transform-origin: 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
 }
 
 

@@ -7,7 +7,7 @@ $lightgreen: #cff0da;
 $darkgreen: #3ac569;
 $grey: #dadbdb/* #dadbdb */;
 $greengray: #BFD8D0;
-$greenbg: rgba(136, 219, 163, 0.73);
+$lightgrey: #F5F5F5;
 
 .center-block {
   float: none;
@@ -18,15 +18,23 @@ $greenbg: rgba(136, 219, 163, 0.73);
 
 
 $orange: #FFB300;
+
+@mixin box-shadow1{
+  box-shadow: 0 0 0 5px rgba(136, 219, 163, 0.47), 0 15px 12px rgba(0, 0, 0, 0.35);
+  -webkit-box-shadow:0 0 0 5px rgba(136, 219, 163, 0.47), 0 15px 12px rgba(0, 0, 0, 0.35);
+  -moz-box-shadow:0 0 0 5px rgba(136, 219, 163, 0.47), 0 15px 12px rgba(0, 0, 0, 0.35);
+}
 @mixin box-shadow{
-  box-shadow: 0 19px 38px rgba(37, 37, 37, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
-  -webkit-box-shadow: 0 19px 38px rgba(37, 37, 37, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
-  -moz-box-shadow: 0 19px 38px rgba(37, 37, 37, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+  box-shadow: 0 9px 28px rgba(136, 219, 163, 0.47), 0 15px 12px rgba(0, 0, 0, 0.35);
+  -webkit-box-shadow: 0 9px 28px rgba(136, 219, 163, 0.47), 0 15px 12px rgba(0, 0, 0, 0.35);
+  -moz-box-shadow: 0 9px 28px rgba(136, 219, 163, 0.47), 0 15px 12px rgba(0, 0, 0, 0.35);
 }
 
 
+
+
 .recipes-bg{
-  background: $greenbg;
+  background: $lightgrey;
 }
 
 .panel{
@@ -35,12 +43,12 @@ $orange: #FFB300;
 }
 
 .box {
-  @include box-shadow;
+  @include box-shadow1;
   border-radius: 0px;
   padding: 0;
   text-align: center;
   padding-bottom: 10px;
-  margin-bottom: 40px;
+  margin-bottom: 50px;
   -webkit-transition: all .3s ease-out;
   -moz-transition: all .3s ease-out;
   -o-transition: all .3s ease-out;
@@ -49,6 +57,7 @@ $orange: #FFB300;
   &:hover {
     transform: scale(1.075);
     color: #fff;
+    @include box-shadow;
   }
   img {
     max-width: 100%;
@@ -99,9 +108,28 @@ $orange: #FFB300;
   text-align: center;
 }
 
+.navbar-default .navbar-brand{
+  color: inherit;
+}
+
+.recipe-name{
+  padding-left:10px;
+  padding-top: 0;
+  padding-bottom: 5px;
+  color: #000;
+}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus{
+  background-color: $green;
+  color: #fff;
+}
+
 
   #recipe-info{
-    background: $orange;
+    background: $green;
+  }
+
+  .recipe-container{
+    padding-bottom: 50px;
   }
 
   .recipe-show{

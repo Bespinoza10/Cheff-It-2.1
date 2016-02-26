@@ -1,53 +1,54 @@
-.container
-  .recipe-show.col-md-10.center-block.no-col-padl.no-col-padr
-    .header{style: "background-image: url(#{@recipe.image.url});"}
-      #overlay
-        .intro-text
-          .col-sm-12.center-block
-            %h1.txt-center= @recipe.title
-    
-    %nav#recipe-menu.navbar.navbar-default
-      .container-fluid
-        / Brand and toggle get grouped for better mobile display
-        .navbar-header
-          %button.navbar-toggle.collapsed{"aria-expanded" => "false", "data-target" => "#bs-example-navbar-collapse-2", "data-toggle" => "collapse", :type => "button"}
-            %span.sr-only Toggle navigation
-            %span.icon-bar
-            %span.icon-bar
-            %span.icon-bar
-          %a.navbar-brand
-            %h1= @recipe.title
-        / Collect the nav links, forms, and other content for toggling
-        #bs-example-navbar-collapse-2.collapse.navbar-collapse
-          / %ul.nav.navbar-nav.navbar-right
-          %ul#myTabs.nav.navbar-nav.navbar-right{:role => "tablist"}
-            %li.active{:role => "presentation"}
-              %a{"aria-controls" => "home", "data-toggle" => "tab", :href => "#home", :role => "tab"} Description
-            %li{:role => "presentation"}
-              %a{"aria-controls" => "profile", "data-toggle" => "tab", :href => "#profile", :role => "tab"} Ingredients
-            %li{:role => "presentation"}
-              %a{"aria-controls" => "messages", "data-toggle" => "tab", :href => "#messages", :role => "tab"} Directions
+.recipes-bg
+  .container.recipe-container
+    .recipe-show.col-md-10.center-block.no-col-padl.no-col-padr
+      .header{style: "background-image: url(#{@recipe.image.url});"}
+        #overlay
+          .intro-text
+            .col-sm-12.center-block
+              %h1.txt-center= @recipe.title
+
+      %nav#recipe-menu.navbar.navbar-default
+        .container-fluid
+          / Brand and toggle get grouped for better mobile display
+          .navbar-header
+            %button.navbar-toggle.collapsed{"aria-expanded" => "false", "data-target" => "#bs-example-navbar-collapse-2", "data-toggle" => "collapse", :type => "button"}
+              %span.sr-only Toggle navigation
+              %span.icon-bar
+              %span.icon-bar
+              %span.icon-bar
+            %a.navbar-brand.recipe-name
+              %h1= @recipe.title
+          / Collect the nav links, forms, and other content for toggling
+          #bs-example-navbar-collapse-2.collapse.navbar-collapse
+            / %ul.nav.navbar-nav.navbar-right
+            %ul#myTabs.nav.navbar-nav.navbar-right{:role => "tablist"}
+              %li.active{:role => "presentation"}
+                %a{"aria-controls" => "home", "data-toggle" => "tab", :href => "#home", :role => "tab"} Description
+              %li{:role => "presentation"}
+                %a{"aria-controls" => "profile", "data-toggle" => "tab", :href => "#profile", :role => "tab"} Ingredients
+              %li{:role => "presentation"}
+                %a{"aria-controls" => "messages", "data-toggle" => "tab", :href => "#messages", :role => "tab"} Directions
 
 
-    #recipe-info.recipe-show.col-md-12.no-col-padl.no-col-padr
-      .col-md-5.no-col-padl.no-col-padr
-        = image_tag @recipe.image.url, class: "recipe_image"
-      .col-md-7#div1
-        .tab-content
-          #home.tab-pane.active{:role => "tabpanel"}
-            %h1= @recipe.description
-          #profile.tab-pane.fade{:role => "tabpanel"}
-            %h2 Ingredients
-            %ul
-              - @recipe.ingredients.each do |ingredient|
-                %li= ingredient.name
-          #messages.tab-pane.fade{:role => "tabpanel"}
-            %h2 Directions
-            %ul
-              - @recipe.directions.each do |direction|
-                %li= direction.step
+      #recipe-info.recipe-show.col-md-12.no-col-padl.no-col-padr
+        .col-md-5.no-col-padl.no-col-padr
+          = image_tag @recipe.image.url, class: "recipe_image"
+        .col-md-7#div1
+          .tab-content
+            #home.tab-pane.active{:role => "tabpanel"}
+              %h4= @recipe.description
+            #profile.tab-pane.fade{:role => "tabpanel"}
+              %h2 Ingredients
+              %ul
+                - @recipe.ingredients.each do |ingredient|
+                  %li= ingredient.name
+            #messages.tab-pane.fade{:role => "tabpanel"}
+              %h2 Directions
+              %ul
+                - @recipe.directions.each do |direction|
+                  %li= direction.step
 
-/ %br
-/ = link_to "Back", recipes_path, class: "btn btn-default"
-/ = link_to "Edit", edit_recipe_path, class: "btn btn-default"
-/ = link_to "Delete", recipe_path, method: :delete, data: { confirm: "Are you sure?"}, class: "btn btn-default"
+  / %br
+  / = link_to "Back", recipes_path, class: "btn btn-default"
+  / = link_to "Edit", edit_recipe_path, class: "btn btn-default"
+  / = link_to "Delete", recipe_path, method: :delete, data: { confirm: "Are you sure?"}, class: "btn btn-default"

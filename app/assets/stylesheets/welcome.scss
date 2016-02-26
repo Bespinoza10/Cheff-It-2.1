@@ -6,12 +6,14 @@
 $green: #88dba3;
 $lightgreen: #cff0da;
 $darkgreen: #3ac569;
-$grey: #dadbdb;
+$grey: #dadbdb/* #dadbdb */;
+$greengray: #BFD8D0;
+$greenbg: rgba(136, 219, 163, 0.73);
 
 
 .about{
   text-align: center;
-  background: $grey;
+  background: $green;
   padding-top: 100px;
   padding-bottom: 100px;
   margin-left: 0;
