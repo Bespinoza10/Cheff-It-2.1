@@ -5,7 +5,9 @@
 $green: #88dba3;
 $lightgreen: #cff0da;
 $darkgreen: #3ac569;
-$grey: #dadbdb;
+$grey: #dadbdb/* #dadbdb */;
+$greengray: #BFD8D0;
+$greenbg: rgba(136, 219, 163, 0.73);
 
 .center-block {
   float: none;
@@ -17,11 +19,15 @@ $grey: #dadbdb;
 
 $orange: #FFB300;
 @mixin box-shadow{
-  box-shadow: 0 5px 15px #909090;
-  -webkit-box-shadow: 0 5px 15px #909090;
-  -moz-box-shadow: 0 5px 15px #909090;
+  box-shadow: 0 19px 38px rgba(37, 37, 37, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+  -webkit-box-shadow: 0 19px 38px rgba(37, 37, 37, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+  -moz-box-shadow: 0 19px 38px rgba(37, 37, 37, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
 }
 
+
+.recipes-bg{
+  background: $greenbg;
+}
 
 .panel{
   border: none;
@@ -33,32 +39,34 @@ $orange: #FFB300;
   border-radius: 0px;
   padding: 0;
   text-align: center;
+  padding-bottom: 10px;
+  margin-bottom: 40px;
+  -webkit-transition: all .3s ease-out;
+  -moz-transition: all .3s ease-out;
+  -o-transition: all .3s ease-out;
+  transition: all .3s ease-out;
+  color: #000;
+  &:hover {
+    transform: scale(1.075);
+    color: #fff;
+  }
   img {
     max-width: 100%;
     height: auto;
   }
   h2 {
-    font-size: 22px;
+    font-size: 30px;
     margin: 0;
     padding: 25px 10px;
     a {
-      color: $grey;
+      color: inherit;
     }
   }
 }
 
 
 
-  .panel img {
-    width: 100%;
-    -webkit-transition: all .3s ease-out;
-    -moz-transition: all .3s ease-out;
-    -o-transition: all .3s ease-out;
-    transition: all .3s ease-out;
-    &:hover {
-      transform: scale(1.075);
-    }
-  }
+
 
   //SHOW Recipe
 

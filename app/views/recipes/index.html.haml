@@ -1,10 +1,12 @@
-.container
-  - @recipe.each_slice(3) do |recipes|
-    .row
-      - recipes.each do |recipe|
-        .col-md-4
-          .box.panel.panel-default
-            = link_to (image_tag recipe.image.url(:medium)), recipe
-            %h2= link_to recipe.title, recipe
-            %p
-              = truncate(recipe.description, length: 30)
+.container-fluid.recipes-bg
+  .container
+    - @recipe.each_slice(3) do |recipes|
+      .row
+        - recipes.each do |recipe|
+          .col-md-4
+            .box.panel.panel-default
+              = link_to (image_tag recipe.image.url(:medium)), recipe
+              %h2
+                = link_to recipe.title, recipe
+              %p
+                = truncate(recipe.description, length: 30)

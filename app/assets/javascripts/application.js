@@ -28,3 +28,9 @@ $('#myTabs a').click(function (e) {
   e.preventDefault()
   $(this).tab('show')
 })
+
+$(function(){
+    $('.carousel').carousel({
+      interval: 1800
+    });
+});
