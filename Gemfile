@@ -31,6 +31,8 @@ gem 'devise', '~> 3.5', '>= 3.5.6'
 # Hover Transitions
 gem 'hover-rails', '~> 2.0', '>= 2.0.2'
 
+gem 'font-awesome-rails', '~> 4.5'
+
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 

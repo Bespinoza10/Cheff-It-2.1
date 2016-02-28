@@ -48,7 +48,7 @@
                 - @recipe.directions.each do |direction|
                   %li= direction.step
 
-  / %br
-  / = link_to "Back", recipes_path, class: "btn btn-default"
-  / = link_to "Edit", edit_recipe_path, class: "btn btn-default"
-  / = link_to "Delete", recipe_path, method: :delete, data: { confirm: "Are you sure?"}, class: "btn btn-default"
+    %br
+    = link_to "Back", recipes_path, class: "btn btn-default"
+    = link_to "Edit", edit_recipe_path, class: "btn btn-default"
+    = link_to "Delete", recipe_path, method: :delete, data: { confirm: "Are you sure?"}, class: "btn btn-default"

@@ -135,6 +135,10 @@ $orange: #FFB300;
   .recipe-show{
     @include box-shadow;
   }
+  .new-recipe-show{
+    @include box-shadow1;
+    background: $green;
+  }
 
   .recipe_image{
     width: 100%;
@@ -153,4 +157,55 @@ nav#recipe-menu{
   margin-bottom: 0px;
   background: #fff;
   border: none;
+}
+
+
+//Forms
+
+.new-form{
+  padding: 100px 0;
+}
+
+.new-recipes-bg{
+  background: $lightgrey;
+}
+
+
+.new-inputs{
+  border-radius: 0;
+  background: none;
+  color: #fff;
+  border-top:none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid #000;
+}
+
+.new-inputs:focus{
+  box-shadow: none;
+  border-bottom: 1px solid #fff;;
+}
+
+.add-button{
+  border: none;
+  border-radius: 0;
+  background: #fff;
+}
+.btn-danger{
+  border-radius: 0;
+  border: none;
+}
+
+.faa{
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 30px;
+  color: #fff;
+}
+
+.faa:hover{
+  color: #fff;
 }
