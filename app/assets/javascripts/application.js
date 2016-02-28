@@ -29,8 +29,7 @@ $('#myTabs a').click(function (e) {
   $(this).tab('show')
 })
 
-$(function(){
-    $('.carousel').carousel({
-      interval: 1800
-    });
+$('#myCarousel').carousel({
+  interval: 300,
+  cycle: true
 });
